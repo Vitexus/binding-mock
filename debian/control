@@ -1,0 +1,21 @@
+Source: node-serialport-binding-mock
+Section: javascript
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Homepage: https://github.com/serialport/binding-mock
+Vcs-Browser: https://github.com/Vitexus/binding-mock
+Rules-Requires-Root: no
+
+Package: node-serialport-binding-mock
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ node-serialport-bindings-interface,
+ node-debug,
+ ${misc:Depends}
+Description: Mock binding for testing the Node.js serialport library
+ Part of the Node.js serialport library stack. The pre-built dist/ is
+ vendored from the upstream npm release so the Debian build runs offline.
